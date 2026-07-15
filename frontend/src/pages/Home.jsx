@@ -1,18 +1,19 @@
-import Navbar from "../components/layouts/Navbar";
+import Navbar from "../components/layout/Navbar";
 import Hero from "../components/sections/Hero";
+import Features from "../components/sections/Features";
+import Testimonials from "../components/sections/Testimonials";
+import CTA from "../components/sections/CTA";
+import Footer from "../components/layout/Footer";
 
 function Home() {
-  console.log("Home component rendered");
-
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <Navbar />
-
-      <h1 className="text-4xl text-green-500">
-        THIS IS HOME
-      </h1>
-
       <Hero />
+      <Features />
+      <Testimonials />
+      <CTA />
+      <Footer />
     </main>
   );
 }

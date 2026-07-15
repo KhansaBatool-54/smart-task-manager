@@ -1,45 +1,137 @@
 import Button from "../ui/Button";
+import Container from "../ui/Container";
 
 function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+    <section className="relative overflow-hidden bg-slate-950 py-24 text-white">
+
       {/* Background Glow */}
 
-      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-indigo-600/30 blur-[120px]" />
+      <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl"></div>
 
-      <div className="absolute right-10 bottom-20 h-96 w-96 rounded-full bg-violet-600/20 blur-[150px]" />
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
 
-      {/* Content */}
+      <Container>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-8">
-        <div className="max-w-3xl">
-          <p className="mb-6 font-semibold uppercase tracking-[0.35em] text-indigo-400">
-            AI Powered Productivity
-          </p>
+        <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          <h1 className="text-6xl font-black leading-tight md:text-8xl">
-            Organize
+          {/* LEFT */}
 
-            <span className="block bg-gradient-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              Everything.
-            </span>
-          </h1>
+          <div>
 
-          <p className="mt-8 max-w-2xl text-xl leading-9 text-slate-400">
-            TaskNova combines AI, Kanban, Calendar,
-            Analytics and Smart Automation into one
-            beautiful productivity platform.
-          </p>
+            <p className="mb-5 font-semibold uppercase tracking-[0.3em] text-indigo-400">
+              AI Powered Productivity
+            </p>
 
-          <div className="mt-12 flex gap-5">
-            <Button>Get Started</Button>
+            <h1 className="text-5xl font-black leading-tight md:text-7xl">
 
-            <Button variant="secondary">
-              Live Demo
-            </Button>
+              Organize
+
+              <span className="block bg-gradient-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                Everything.
+              </span>
+
+            </h1>
+
+            <p className="mt-8 text-lg leading-9 text-slate-400">
+
+              TaskNova combines AI, Kanban,
+              Calendar, Analytics and Smart
+              Automation into one modern
+              productivity platform.
+
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+
+              <Button>
+                Get Started
+              </Button>
+
+              <Button variant="secondary">
+                Live Demo
+              </Button>
+
+            </div>
+
           </div>
+
+          {/* RIGHT */}
+
+          <div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl">
+
+              {/* Top */}
+
+              <div className="mb-6 flex items-center justify-between">
+
+                <h3 className="font-bold text-xl">
+                  Dashboard
+                </h3>
+
+                <span className="rounded-full bg-green-500 px-3 py-1 text-xs">
+                  Live
+                </span>
+
+              </div>
+
+              {/* Stats */}
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div className="rounded-xl bg-slate-800 p-5">
+
+                  <p className="text-slate-400">
+                    Tasks
+                  </p>
+
+                  <h2 className="mt-2 text-3xl font-bold">
+                    148
+                  </h2>
+
+                </div>
+
+                <div className="rounded-xl bg-slate-800 p-5">
+
+                  <p className="text-slate-400">
+                    Completed
+                  </p>
+
+                  <h2 className="mt-2 text-3xl font-bold text-green-400">
+                    92%
+                  </h2>
+
+                </div>
+
+              </div>
+
+              {/* Today's Tasks */}
+
+              <div className="mt-6 space-y-3">
+
+                <div className="rounded-lg bg-slate-800 p-4">
+                  ✔ Complete React Project
+                </div>
+
+                <div className="rounded-lg bg-slate-800 p-4">
+                  📅 Team Meeting
+                </div>
+
+                <div className="rounded-lg bg-slate-800 p-4">
+                  🤖 AI Suggestions Ready
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
+
+      </Container>
+
     </section>
   );
 }
